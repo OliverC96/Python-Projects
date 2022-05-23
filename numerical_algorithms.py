@@ -92,6 +92,7 @@ def print_happy_numbers(n):
 # Recursive approach to computing the factorial of n
 def r_fact(n):
 
+    # Base case, recursion terminates
     if n == 0:
 
         return 1
@@ -117,6 +118,40 @@ def i_fact(n):
             factorial *= (n-i)
 
         return factorial
+
+
+# Recursive approach to computing the nth Fibonacci number
+def r_fib(n):
+
+    # Base case, recursion terminates
+    if n <= 2:
+
+        return 1
+
+    else:
+
+        return r_fib(n-1) + r_fib(n-2)
+
+
+# Iterative approach to computing the nth Fibonacci number
+def i_fib(n):
+
+    if n <= 2:
+
+        return 1
+
+    else:
+
+        prev = 1
+        curr = 1
+
+        for i in range(n-2):
+
+            next = prev + curr
+            prev = curr
+            curr = next
+
+        return next
 
 
 # Implements the Luhn algorithm (check sum) to determine whether or not a given credit card number is valid
