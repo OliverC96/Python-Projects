@@ -6,9 +6,9 @@ import os
 from twilio.rest import Client
 
 # Declaring constants
-STOCK_API_KEY = "WFDLKA9MUKMGOO4J"
+STOCK_API_KEY = os.environ["STOCK_KEY"]
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
-NEWS_API_KEY = "6ae7f8f840b7493cab42fcd62f1e966c"
+NEWS_API_KEY = os.environ["NEWS_KEY"]
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
 TICKER = "TSLA"
@@ -16,9 +16,9 @@ NAME = "Tesla"
 DOWN_ARROW = "🔻"
 UP_ARROW = "🔺"
 
-ACCOUNT_SID = "AC9487b451231902436ab29a8483fbbd85"
-AUTH_TOKEN = "4e56b675680d5506d52f022d3d234d66"
-TWILIO_NUMBER = "+19035516263"
+ACCOUNT_SID = os.environ["TWILIO_SID"]
+AUTH_TOKEN = os.environ["TWILIO_TOKEN"]
+TWILIO_NUMBER = os.environ["TWILIO_NUMBER"]
 MY_NUMBER = os.environ["MY_NUMBER"]
 
 
