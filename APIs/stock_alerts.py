@@ -2,6 +2,7 @@
 import requests
 import datetime as dt
 import random
+import os
 from twilio.rest import Client
 
 # Declaring constants
@@ -18,7 +19,7 @@ UP_ARROW = "🔺"
 ACCOUNT_SID = "AC9487b451231902436ab29a8483fbbd85"
 AUTH_TOKEN = "4e56b675680d5506d52f022d3d234d66"
 TWILIO_NUMBER = "+19035516263"
-MY_NUMBER = "+15875775433"
+MY_NUMBER = os.environ["MY_NUMBER"]
 
 
 # Returns a two-tuple containing the current date and the most recent weekday, in ISO 8601 format
