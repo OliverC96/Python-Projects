@@ -33,29 +33,8 @@ def get_date() -> tuple:
 
         yesterday = yesterday - dt.timedelta(days=2)
 
-    c_month = str(current.month)
-    c_day = str(current.day)
-    y_month = str(yesterday.month)
-    y_day = str(yesterday.day)
-
-    if int(c_month) < 10:
-
-        c_month = "0" + c_month
-
-    if int(c_day) < 10:
-
-        c_day = "0" + c_day
-
-    if int(y_month) < 10:
-
-        y_month = "0" + y_month
-
-    if int(y_day) < 10:
-
-        y_day = "0" + y_day
-
-    c_date = str(current.year) + "-" + c_month + "-" + c_day
-    y_date = str(yesterday.year) + "-" + y_month + "-" + y_day
+    c_date = current.strftime("%Y") + "-" + current.strftime("%m") + "-" + current.strftime("%d")
+    y_date = yesterday.strftime("%Y") + "-" + yesterday.strftime("%m") + "-" + yesterday.strftime("%d")
 
     return c_date, y_date
 
