@@ -4,6 +4,11 @@ name: CI
 
 env:
     MY_NUMBER: ${{ secrets.MY_NUMBER }}
+    TWILIO_NUMBER: ${{ secrets.TWILIO_NUMBER }}
+    STOCK_KEY: ${{ secrets.STOCK_KEY }}
+    NEWS_KEY: ${{ secrets.NEWS_KEY }}
+    TWILIO_SID: ${{ secrets.TWILIO_SID }}
+    TWILIO_AUTH: ${{ secrets.TWILIO_AUTH }}
   
 # Controls when the workflow will run
 on:
