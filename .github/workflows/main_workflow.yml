@@ -9,6 +9,11 @@ env:
     NEWS_KEY: ${{ secrets.NEWS_KEY }}
     TWILIO_SID: ${{ secrets.TWILIO_SID }}
     TWILIO_TOKEN: ${{ secrets.TWILIO_TOKEN }}
+    MY_EMAIL: ${{ secrets.MY_EMAIL }}
+    EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+    BITLY_TOKEN: ${{ secrets.BITLY_TOKEN }}
+    TEQUILA_KEY: ${{ secrets.TEQUILA_KEY }}
+    SHEETY_TOKEN: ${{ secrets.SHEETY_TOKEN }}
   
 # Controls when the workflow will run
 on:
