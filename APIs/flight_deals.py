@@ -3,10 +3,11 @@ import requests
 import datetime as dt
 import smtplib
 import time
+import os
 from twilio.rest import Client
 
 # Declaring constants (keys, tokens, and endpoints for API usage)
-TEQUILA_KEY = "hvLnkJsKc7kPTCY1U_LD3Sxri5XJMP_J"
+TEQUILA_KEY = os.environ["TEQUILA_KEY"]
 TEQUILA_ENDPOINT = "https://tequila-api.kiwi.com"
 ORIGIN_CODE = "YYC"
 TEQUILA_HEADERS = {
@@ -15,22 +16,22 @@ TEQUILA_HEADERS = {
 }
 
 SHEETY_ENDPOINT = "https://api.sheety.co/081b8783110aa213c9d733711b278567/flightDeals"
-SHEETY_TOKEN = "s234kSdFK23423isZsdfoOeR"
+SHEETY_TOKEN = os.environ["SHEETY_TOKEN"]
 SHEETY_HEADER = {
     "Authorization": "Bearer {}".format(SHEETY_TOKEN)
 }
 
-TWILIO_SID = "AC9487b451231902436ab29a8483fbbd85"
-TWILIO_TOKEN = "e5b6f45fdc3f4480c737ebf3b90d0dcf"
-TWILIO_NUMBER = "+19035516263"
+TWILIO_SID = os.environ["TWILIO_SID"]
+TWILIO_TOKEN = os.environ["TWILIO_TOKEN"]
+TWILIO_NUMBER = os.environ["TWILIO_NUMBER"]
 
-MY_NUMBER = "+15875775433"
-MY_EMAIL = "clennanoliver@gmail.com"
-MY_PASSWORD = "srhtxcgimvkuywwy"
+MY_NUMBER = os.environ["MY_NUMBER"]
+MY_EMAIL = os.environ["MY_EMAIL"]
+MY_PASSWORD = os.environ["EMAIL_PASS"]
 SUBJECT = "NEW LOW PRICE FLIGHT!"
 
 BITLY_ENDPOINT = "https://api-ssl.bitly.com/v4/shorten"
-BITLY_TOKEN = "1115da2722bf2f8c01ae6709c4a3aa6645437d11"
+BITLY_TOKEN = os.environ["BITLY_TOKEN"]
 BITLY_HEADERS = {
     "Authorization": "Bearer {}".format(BITLY_TOKEN),
     "content-type": "application/json"
