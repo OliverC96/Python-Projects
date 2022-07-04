@@ -14,6 +14,9 @@ env:
     BITLY_TOKEN: ${{ secrets.BITLY_TOKEN }}
     TEQUILA_KEY: ${{ secrets.TEQUILA_KEY }}
     SHEETY_TOKEN: ${{ secrets.SHEETY_TOKEN }}
+    SPOTIFY_ID: ${{ secrets.SPOTIFY_ID }}
+    SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
+    SPOTIFY_AUTH: ${{ secrets.SPOTIFY_AUTH }}
   
 # Controls when the workflow will run
 on:
