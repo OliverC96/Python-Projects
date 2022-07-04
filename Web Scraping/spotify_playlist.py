@@ -54,7 +54,7 @@ def get_top_100(date: str) -> list:
     response = requests.get(billboard_url.format(date))
     soup = BeautifulSoup(response.text, "lxml")
 
-    # Extracting the song names from the webpage (using the Beautiful Soup web-scraping libray)
+    # Extracting the song names from the webpage (using the Beautiful Soup web-scraping library)
     all_songs = soup.find_all("h3", id="title-of-a-story", class_="a-no-trucate")
     top_100 = []
 
