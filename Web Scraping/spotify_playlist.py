@@ -3,14 +3,15 @@ import requests
 from bs4 import BeautifulSoup
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import os
 
 # Declaring constants and global variables
 QUERY_SCOPE = "playlist-modify-private"
 CACHE_PATH = "token.txt"
 REDIRECT_URL = "http://example.com"
-SPOTIFY_ID = "6664757bb5a84c0aaf93e314f2db9b63"
-SPOTIFY_SECRET = "9cb2fe88028a4242abd82d081178fbde"
-AUTH_TOKEN = "BQClu4nAb_5wlJW0XO7Mny_jxj7c7fuK2E-8cYQ8mGizAS4MHMVA5191FGh7W86_AJMbOPlfjxRIU4ldIV3ZJmhdhEDH7s_KFboGJ-QPNvBAMZNz63nuca_a8SB0lep3rjm3hU0guMk5LhP3j8Y2RvVcszT9c6XTj5AWnSwlDAVsjOQqRiS3cw9uwMtT52DpGEmJN3BkmW18UbuQ2w"
+SPOTIFY_ID = os.environ["SPOTIFY_ID"]
+SPOTIFY_SECRET = os.environ["SPOTIFY_SECRET"]
+AUTH_TOKEN = os.environ["SPOTIFY_AUTH"]
 billboard_url = "https://www.billboard.com/charts/hot-100/{}/"
 
 
