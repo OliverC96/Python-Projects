@@ -17,6 +17,7 @@ env:
     SPOTIFY_ID: ${{ secrets.SPOTIFY_ID }}
     SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
     SPOTIFY_AUTH: ${{ secrets.SPOTIFY_AUTH }}
+    RECIP_EMAIL: ${{ secrets.RECIP_EMAIL }}
   
 # Controls when the workflow will run
 on:
