@@ -3,12 +3,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
+import os
 
 # Declaring constants
 LINKEDIN_MAIN = "https://ca.linkedin.com/"
-MY_EMAIL = "oliverjc2021@gmail.com"
-MY_PASS = "AnniesBakery123"
-MY_PHONE = "5875775433"
+MY_EMAIL = os.environ["ALT_EMAIL"]
+MY_PASS = os.environ["LNKDN_PASS"]
+MY_PHONE = os.environ["MY_NUMBER"]
 DESIRED_JOB = "python developer"
 DESIRED_LOCATION = "Calgary"
 FILTERS = ["Past Month", "Internship", "Entry level", "Remote", "Software Engineer", "Python Developer", "Java Software Engineer", "$40,000+"]
