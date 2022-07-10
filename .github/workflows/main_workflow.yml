@@ -18,6 +18,8 @@ env:
     SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
     SPOTIFY_AUTH: ${{ secrets.SPOTIFY_AUTH }}
     RECIP_EMAIL: ${{ secrets.RECIP_EMAIL }}
+    ALT_EMAIL: ${{ secrets.ALT_EMAIL }}
+    LNKDN_PASS: ${{ secrets.LNKDN_PASS }}
   
 # Controls when the workflow will run
 on:
