@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import os
 
 # Declaring constants and global variables
 QUERY_SCOPE = "playlist-modify-private"
