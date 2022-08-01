@@ -155,7 +155,7 @@ def get_internet_speeds() -> tuple:
 # Utilizes the Selenium (Browser Automation) framework to send complaints to an ISP via Twitter if internet speeds are not desirable/sufficient
 if __name__ == "__main__":
 
-    # Evaluating internet speeds on a daily basis
+    # Evaluating internet speeds on a daily basis (according to data from an Ookla Speedtest)
     while True:
 
         time.sleep(86400)
