@@ -7,8 +7,8 @@ import os
 
 # Declaring constants and global variables
 TWITTER_MAIN = "https://twitter.com"
-MY_USER = "OliverClennan"
-MY_PASS = "601155002"
+MY_USER = os.environ["TWITTER_USER"]
+MY_PASS = os.environ["TWITTER_PASS"]
 DESIRED_DOWN = 75
 DESIRED_UP = 75
 OOKLA_ENDPOINT = "https://www.speedtest.net"
