@@ -3,15 +3,16 @@ import requests
 from bs4 import BeautifulSoup
 import smtplib
 import time
+import os
 
 # Declaring constants
 PRODUCT_URL = "https://www.amazon.ca/Crate-61-essential-patchouli-activated/dp/B07CMJ4XGF/ref=sxts_rp_s_1_0?content-id=amzn1.sym.c7f6ac45-4e13-4a92-93ea-0aa88f4cc599%3Aamzn1.sym.c7f6ac45-4e13-4a92-93ea-0aa88f4cc599&crid=8LMPK7R07UON&cv_ct_cx=soap&keywords=soap&pd_rd_i=B07CMJ4XGF&pd_rd_r=61166338-3077-446b-bed5-5a9f440906f8&pd_rd_w=JqioT&pd_rd_wg=tgSSW&pf_rd_p=c7f6ac45-4e13-4a92-93ea-0aa88f4cc599&pf_rd_r=C6HEVFX4PMM87F2SJEE7&psc=1&qid=1656986150&sprefix=soap%2Caps%2C157&sr=1-1-f0029781-b79b-4b60-9cb0-eeda4dea34d6"
 TITLE = "Amazon Price Alert!"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = "587"
-MY_EMAIL = "clennanoliver@gmail.com"
-MY_PASS = "cphxyuahejhnrhnc"
-RECIPIENT = "oliverclennan@gmail.com"
+MY_EMAIL = os.environ["MY_EMAIL"]
+MY_PASS = os.environ["EMAIL_PASS"]
+RECIPIENT = os.environ["RECIP_EMAIL"]
 
 QUERY_HEADER = {
     "accept-language": "en-CA,en-US;q=0.9,en;q=0.8",
