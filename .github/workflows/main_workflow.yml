@@ -20,6 +20,8 @@ env:
     RECIP_EMAIL: ${{ secrets.RECIP_EMAIL }}
     ALT_EMAIL: ${{ secrets.ALT_EMAIL }}
     LNKDN_PASS: ${{ secrets.LNKDN_PASS }}
+    TWITTER_USER: ${{ secrets.TWITTER_USER }}
+    TWITTER_PASS: ${{ secrets.TWITTER_PASS }}
   
 # Controls when the workflow will run
 on:
