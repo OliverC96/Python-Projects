@@ -22,6 +22,7 @@ env:
     LNKDN_PASS: ${{ secrets.LNKDN_PASS }}
     TWITTER_USER: ${{ secrets.TWITTER_USER }}
     TWITTER_PASS: ${{ secrets.TWITTER_PASS }}
+    FORM_LINK: ${{ secrets.FORM_LINK }}
   
 # Controls when the workflow will run
 on:
