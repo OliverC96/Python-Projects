@@ -7,9 +7,10 @@ import undetected_chromedriver as uc
 import requests
 import time
 import json
+import os
 
 # Declaring constants (API endpoints, headers and tokens)
-FORM_LINK = "https://forms.gle/FQpb9475RQqp5hv66"
+FORM_LINK = os.environ["FORM_LINK"]
 ZILLOW_LINK = "https://www.zillow.com"
 
 QUERY_HEADER = {
@@ -18,16 +19,10 @@ QUERY_HEADER = {
 }
 
 BITLY_ENDPOINT = "https://api-ssl.bitly.com/v4/shorten"
-BITLY_TOKEN = "1115da2722bf2f8c01ae6709c4a3aa6645437d11"
+BITLY_TOKEN = os.environ["BITLY_TOKEN"]
 BITLY_HEADERS = {
     "Authorization": "Bearer {}".format(BITLY_TOKEN),
     "content-type": "application/json"
-}
-
-SHEETY_ENDPOINT = "https://api.sheety.co/081b8783110aa213c9d733711b278567/flightDeals"
-SHEETY_TOKEN = "s234kSdFK23423isZsdfoOeR"
-SHEETY_HEADER = {
-    "Authorization": "Bearer {}".format(SHEETY_TOKEN)
 }
 
 
