@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Linking CSS/JS Stylesheets, Favicons, Google Fonts, Font Awesome, and Bootstrap CDN links -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Bentley's Bookstore </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="../static/main.css">
+    <link type="text/css" rel="stylesheet" href="../static/resizing.css">
+    <link rel="icon" href="../static/book2_favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Raleway:wght@200;300;400;500&family=Roboto+Slab:wght@200;300;400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="home_wrapper">
+
+        <!-- NAVIGATION BAR -->
+        <nav>
+
+            <div id="nav-wrapper">
+
+                <h1 id="title"> <a href="#home_wrapper"> bentley's books </a> <img id="book_icon" src="../static/books-7.png"></h1>
+
+                <ul id="nav-links">
+
+                    <li><a href="#contact" style="margin-right: 30px"> Contact </a></li>
+                    <li><a href="#pricing" style="margin-right: 30px"> Pricing </a></li>
+                    <li><a href="#download"> Download </a></li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- HOMEPAGE -->
+        <section id="home">
+
+            <div id="info_text">
+
+                 <h1 id="phrase"> The Best Books' Money Can Buy <i class="far fa-copyright" id="copyright_icon"></i> - access our carefully curated collection of books today. </h1>
+
+                 <div>
+
+                     <button type="button" id="apple_download" style="margin-right: 15px"> <i class="fab fa-apple"></i> Download </button>
+                     <button type="button" id="android_download"> <i class="fab fa-google-play"></i> Download </button>
+
+                 </div>
+
+            </div>
+
+            <div id="mockup">
+
+                <img class="small_mockup" src="../static/iphone_small.png" alt="iphone_fade" style="margin-right: -20%; z-index: 1;">
+                <img class="large_mockup" src="../static/iphone_large.png" alt="iphone_mockup" style="z-index: 2;">
+                <img class="small_mockup" src="../static/iphone_small.png" alt="iphone_fade" style="margin-left: -20%; z-index: 1;">
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- PRICING PLANS -->
+    <section id="pricing">
+
+        <div id="price_info">
+
+            <h1> A Plan for Every Book-Lover </h1>
+            <h3> Simple and affordable price plans to bring you closer to your books. </h3>
+
+        </div>
+
+        <div id="price_plans">
+
+            <div class="plan_container">
+
+                <h1 class="plan_name"> The Casual Reader </h1>
+                <ul class="plan_content">
+
+                    <li class="plan_price"> Free </li>
+                    <li class="plan_perk"> 5% In-Store Discount </li>
+                    <li class="plan_perk"> Monthly Access to 1 Free E-book </li>
+                    <li class="register"> <button type="button" id="free_button"> Sign Up </button></li>
+
+                </ul>
+
+            </div>
+
+            <div class="plan_container">
+
+                <h1 class="plan_name"> The Bookworm </h1>
+                <ul class="plan_content">
+
+                    <li class="plan_price"> $5.99 / mo </li>
+                    <li class="plan_perk"> 10% In-Store Discount </li>
+                    <li class="plan_perk"> Unlimited Free Shipping </li>
+                    <li class="plan_perk"> Monthly Access to 2 Free E-books </li>
+                    <li class="register"> <button type="button"> Sign Up </button></li>
+
+                </ul>
+
+            </div>
+
+            <div class="plan_container">
+
+                <h1 class="plan_name"> The Bibliophile </h1>
+                <ul class="plan_content">
+
+                    <li class="plan_price"> $8.99 / mo </li>
+                    <li class="plan_perk"> 15% In-Store Discount </li>
+                    <li class="plan_perk"> Unlimited Free Shipping </li>
+                    <li class="plan_perk"> Family Sharing (up to 5 People) </li>
+                    <li class="plan_perk"> Monthly Access to 5 Free E-books </li>
+                    <li class="register"> <button type="button"> Sign Up </button></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+
+        <!-- Constructing a responsive testimonial 'carousel' object using Bootstrap 5 -->
+        <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+
+                <button type="button" data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#testimonial-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active container-fluid">
+
+                    <h2 class="testimonial-text"> A unique bookstore bringing unprecedented levels of personalization to your reading experience.  </h2>
+                    <div class="testimonial-author">
+
+                        <img class="testimonial-image" src="../static/henry.png">
+                        <em>Tim, Alberta</em>
+
+                    </div>
+
+                </div>
+                <div class="carousel-item container-fluid">
+
+                    <h2 class="testimonial-text"> Affordable price plans making it easier than ever to enjoy literature - highly recommend!  </h2>
+
+                    <div class="testimonial-author">
+
+                        <img class="testimonial-image" src="../static/emily.png">
+                        <em>Sarah, Ontario</em>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </a>
+            <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </a>
+
+        </div>
+
+        <div id="press">
+
+            <img class="press-logo" src="../static/techcrunch.png">
+            <img class="press-logo" src="../static/tnw.png">
+            <img class="press-logo" src="../static/bizinsider.png">
+            <img class="press-logo" src="../static/mashable.png">
+
+        </div>
+
+    </section>
+
+    <!-- APP DOWNLOAD BUTTONS -->
+    <section id="download">
+
+        <div>
+
+            <h3> Delve deeper into the wonderful world of books. </h3>
+
+        </div>
+
+        <div id="alt_buttons">
+
+            <button type="button" style="margin-right: 40px;"> <i class="fab fa-apple"></i> Download </button>
+            <button type="button"> <i class="fab fa-google-play"></i> Download </button>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT & CONNECT -->
+    <footer id="contact">
+
+        <div id="social_links">
+
+            <button type="button" id="facebook_icon" onclick="window.open('https://facebook.com', '_blank');"> <a class="fab fa-facebook"> </a></button>
+            <button type="button" id="twitter_icon" onclick="window.open('https://twitter.com', '_blank');"> <a class="fab fa-twitter"> </a></button>
+            <button type="button" id="instagram_icon" onclick="window.open('https://instagram.com', '_blank');"> <a class="fab fa-instagram"> </a></button>
+            <button type="button" id="gmail_icon" onclick="window.open('https:/gmail.com', '_blank');"> <a class="fa fa-envelope"> </a></button>
+
+        </div>
+
+        <div id="copyright">
+
+            <!-- Using Jinja to ensure the copyright year is always up-to-date -->
+            <h3> <i class="far fa-copyright"></i> {{ curr_year }} Bentley's Books </h3>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

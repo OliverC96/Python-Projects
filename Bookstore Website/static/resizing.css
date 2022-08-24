@@ -1,0 +1,146 @@
+/* ADJUSTING TO FIT TABLET SPECIFICATIONS */
+@media only screen and (max-width: 1300px) {
+    #home_wrapper {
+        padding: 4% 20% 3% 10%;
+    }
+    #home {
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+    }
+    #pricing {
+        height: fit-content;
+        padding: 5% 20%;
+        align-items: center;
+    }
+    #price_info > h1 {
+        text-align: center;
+    }
+    #price_info > h3 {
+        margin-top: 3%;
+    }
+    #price_plans {
+        flex-direction: column;
+        margin-top: -1%;
+    }
+    .plan_content {
+        padding-right: 7.5%;
+    }
+    .plan_container {
+        width: 50vw;
+        margin: 7% 0 0 4%;
+    }
+    .plan_name {
+        margin-top: 1%;
+    }
+    #testimonials {
+        height: fit-content !important;
+        padding: 5% 2%;
+    }
+    #download {
+        padding: 0 5%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #nav-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #home_wrapper {
+        padding: 5% 20% 3% 10%;
+    }
+    #pricing {
+        padding: 8% 11%;
+    }
+    .testimonial-author {
+        margin-top: 8% !important;
+    }
+    #press {
+        padding-left: 20%;
+        padding-top: 5%;
+    }
+    .carousel-indicators {
+        margin-bottom: -2% !important;
+    }
+}
+
+/* ADJUSTING TO FIT MOBILE SPECIFICATIONS */
+@media only screen and (max-width: 700px) {
+    #home_wrapper {
+        padding: 8% 23% 3% 10%;
+    }
+    #home {
+        align-items: center;
+    }
+    #nav-links {
+        margin-top: -2%;
+        justify-content: center;
+        margin-left: -26%;
+    }
+    #title {
+        margin-right: -25%;
+    }
+    #nav-links > li > a {
+        font-size: 20px;
+    }
+    #phrase {
+        font-size: 40px;
+    }
+    #info_text {
+        margin-top: 5%;
+    }
+    #mockup {
+        transform: scale(0.95);
+        padding-right: 50%;
+    }
+    #price_plans {
+        margin-top: -2%;
+    }
+    .plan_container {
+        margin-top: 10%;
+        width: 77vw;
+        margin-left: 2.5%;
+    }
+    .plan_content {
+        padding-right: 9.5%;
+    }
+    #price_info > h1 {
+        font-size: 40px;
+    }
+    #price_info > h3 {
+        margin-top: 5%;
+    }
+    .carousel-indicators {
+        margin-bottom: -4% !important;
+    }
+    .testimonial-author {
+        display: flex;
+        flex-direction: column !important;
+    }
+    .testimonial-author > em {
+        padding-top: 5%;
+    }
+    .testimonial-text {
+        font-size: 38px;
+    }
+    #press {
+        padding-top: 8%;
+        padding-bottom: 2%;
+        padding-left: 23%;
+    }
+    #press > img {
+        padding-top: 2%;
+    }
+    #download > div > h3 {
+        font-size: 45px;
+    }
+    #download > div > button {
+        transform: scale(0.90);
+    }
+    #download > div > button:nth-of-type(2) {
+        margin-left: -5%;
+    }
+}
