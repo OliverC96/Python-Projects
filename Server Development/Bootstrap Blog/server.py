@@ -5,19 +5,20 @@ import requests
 import json
 import smtplib
 from twilio.rest import Client
+import os
 
 # Declaring constants (API endpoints, authorization tokens, etc.)
 DATA_ENDPOINT = "https://api.npoint.io/718381b611359a39567f"
 
-MY_EMAIL = "oliverclennan@gmail.com"
-EMAIL_PASS = "ndtpwgspkmirhpfb"
+MY_EMAIL = os.environ["MY_EMAIL"]
+EMAIL_PASS = os.environ["EMAIL_PASS"]
 SERVER_DOMAIN = "smtp.gmail.com"
 SERVER_PORT = 587
 
-TWILIO_SID = "AC9487b451231902436ab29a8483fbbd85"
-TWILIO_AUTH = "9dc24ff793ff27c90d7cde41d3fccc4e"
-TWILIO_NUMBER = "+19035516263"
-MY_NUMBER = "+15875775433"
+TWILIO_SID = os.environ["TWILIO_SID"]
+TWILIO_AUTH = os.environ["TWILIO_TOKEN"]
+TWILIO_NUMBER = os.environ["TWILIO_NUMBER"]
+MY_NUMBER = os.environ["MY_NUMBER"]
 
 # Creating a Flask application
 app = Flask(__name__)
