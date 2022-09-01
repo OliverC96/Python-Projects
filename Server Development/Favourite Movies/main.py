@@ -43,7 +43,7 @@ class AddMovieForm(FlaskForm):
     submit = SubmitField(label="Add Movie")
 
 
-# Configuring the columns of the database (and their allowable types/formats)
+# Configuring the attributes/columns of each row in the database (and their allowable types/formats)
 class Movie(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
