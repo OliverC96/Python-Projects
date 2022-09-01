@@ -6,11 +6,12 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FloatField
 from wtforms.validators import DataRequired
 import requests
+import os
 
 
 # Declaring constants (API keys, endpoints, and headers)
-TMDB_KEY = "43a8830d093a2c58122f00e7a73a19c2"
-TMDB_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0M2E4ODMwZDA5M2EyYzU4MTIyZjAwZTdhNzNhMTljMiIsInN1YiI6IjYzMGZlYWI0MTI2ZWMzMDA3YjNlNDIyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TN4sqSZUAB_jJlA8kEgmvwyaWTZo53Eg1XHS5VSH-Ls"
+TMDB_KEY = os.environ["TMDB_KEY"]
+TMDB_TOKEN = os.environ["TMDB_TOKEN"]
 TMDB_ENDPOINT = "https://api.themoviedb.org/3"
 IMG_ENDPOINT = "https://image.tmdb.org/t/p/w500"
 TMDB_HEADERS = {
@@ -20,7 +21,7 @@ TMDB_HEADERS = {
 
 # Creating a Flask application with a corresponding database (via SQAlchemy)
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ["MOVIE_SECRET"]
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///movies.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap(app)
