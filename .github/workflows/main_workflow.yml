@@ -23,6 +23,9 @@ env:
     TWITTER_USER: ${{ secrets.TWITTER_USER }}
     TWITTER_PASS: ${{ secrets.TWITTER_PASS }}
     FORM_LINK: ${{ secrets.FORM_LINK }}
+    TMDB_KEY: ${{ secrets.TMDB_KEY }}
+    TMDB_TOKEN: ${{ secrets.TMDB_TOKEN }}
+    MOVIE_SECRET: ${{ secrets.MOVIE_SECRET }}
   
 # Controls when the workflow will run
 on:
