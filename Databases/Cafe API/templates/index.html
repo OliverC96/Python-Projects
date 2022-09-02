@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Linking the stylesheet, Font Awesome, and Google Fonts -->
+    <meta charset="UTF-8">
+    <title> Cafe & Wifi API </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Raleway:wght@200;300;400;500&family=Roboto+Slab:wght@200;300;400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Content Wrapper -->
+    <div id="wrapper">
+
+        <h1> Welcome to the Cafe & Wifi API! </h1>
+
+        <!-- Button Wrapper -->
+        <div id="buttons">
+
+            <!-- Buttons containing links to the '/all' endpoint, and the complete API documentation -->
+            <a type="button" href="{{ url_for('all_cafes') }}" target="_blank"> Cafe List </a>
+            <a type="button" href="https://documenter.getpostman.com/view/23131562/VUxPw7sW" target="_blank"> Documentation </a>
+
+        </div>
+
+    </div>
+
+    <!-- Copyright Wrapper -->
+    <div id="copyright">
+
+        <!-- Copyright Message -->
+        <p> <i class="far fa-copyright"></i> {{ year }} Oliver Clennan </p>
+
+    </div>
+
+</body>
+</html>
