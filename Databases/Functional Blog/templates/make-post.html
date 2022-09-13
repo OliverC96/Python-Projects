@@ -1,0 +1,38 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'bootstrap/base.html' %}
+
+{% block content %}
+{% include "header.html" %}
+{% include "navbar.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1507494924047-60b8ee826ca9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+
+              <h1>{{ page_header }}</h1>
+
+            <span class="subheading">Release those brilliant ideas!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-lg-8 col-md-10 mx-auto pb-5">
+
+        {{ wtf.quick_form(form=form, novalidate=True, button_map={"submit":"primary"}) }}
+        {{ ckeditor.load() }}
+        {{ ckeditor.config(name='body') }}
+
+      </div>
+    </div>
+  </div>
+
+{% include "footer.html" %}
+{% endblock %}

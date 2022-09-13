@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+<!-- Navigation-->
+{% include "navbar.html" %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1531592937781-344ad608fabf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1> Register </h1>
+                    <span class="subheading"> Start Contributing to the Blog! </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="mb-3">
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <span style="color: red; margin-bottom: 2% !important;" class="subheading">{{ message }}</span>
+                        {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div class="mb-3">
+                    <form id="registerForm" action='{{ url_for("register_user") }}' method="post">
+                        <div class="form">
+                            <label for="name"><b>Full Name</b></label>
+                            <input style="margin-top: 1%;" class="form-control" id="name" name="name" type="text"/>
+                        </div>
+                        <div class="form">
+                            <label style="margin-top: 2%;" for="email"><b>Email Address</b></label>
+                            <input style="margin-top: 1%;" class="form-control" id="email" name="email" type="email"/>
+                        </div>
+                        <div class="form">
+                            <label style="margin-top: 2%;" for="password"><b>Password</b></label>
+                            <input style="margin-top: 1%;" class="form-control" id="password" type="password" name="password"/>
+                        </div>
+                        <br/>
+                        <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer-->
+{% include "footer.html" %}
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="../static/js/scripts.js"></script>
+
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
